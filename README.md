@@ -38,6 +38,17 @@ const smee = new SmeeClient({
 const events = smee.start()
 
 // Stop forwarding events
+events.close()import SmeeClient from 'smee-client'
+
+const smee = new SmeeClient({
+  source: 'https://smee.io/abc123',
+  target: 'http://localhost:3000/events',
+  logger: console
+})
+
+const events = smee.start()
+
+// Stop forwarding events
 events.close()
 ```
 
